@@ -1,17 +1,18 @@
-import React, { useState,useEffect,useCallback } from 'react';
+import React, { useState ,useEffect} from 'react';
 import Seacrh from './component/Search'
 import Results from './component/Results'
+import Popup from './component/Popup'
 import Axios from 'axios'
 
 
 function App() {
       const [state,setState] = useState({
-         s:"",
+         s:"Pokemon",
          results:[],
         selected:{},
   });
 
-         const apiurl = "http://www.omdbapi.com/?i=tt3896198&apikey=79a741e4";
+         const apiurl = "http://www.omdbapi.com/?&apikey=79a741e4";
 
          const search = (e) => {
     if (e.key === "Enter") {
@@ -25,6 +26,21 @@ function App() {
     }
   }
   
+  useEffect(() => {
+    Axios(apiurl + "&s=" + state.s).then(({ data }) => {
+        let results = data.Search;
+
+        setState(prevState => {
+          return { ...prevState, results: results }
+        })
+      });
+  }, []);
+
+
+
+
+
+
   const handleInput = (e) => {
     let s = e.target.value;
 
@@ -33,7 +49,22 @@ function App() {
     });
   }
 
+  const openPopup = id => {
+    Axios(apiurl + "&i=" + id).then(({ data }) => {
+      let result = data;
+      setState(prevState => {
+        return { ...prevState, selected: result }
+      });
+    });
+  }
 
+
+
+  const closePopup = () => {
+    setState(prevState => {
+      return { ...prevState, selected: {} }
+    });
+  }
 
 
 
@@ -46,7 +77,8 @@ function App() {
       </header>
       <main>
         <Seacrh handleInput={handleInput} search={search}/>
-        <Results results={state.results}/>
+        <Results results={state.results} openPopup={openPopup}/>
+        {(typeof state.selected.Title != "undefined") ? <Popup selected={state.selected} closePopup={closePopup} /> : false}
       </main>
     </div>
   );

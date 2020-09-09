@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Search({search,useCallBack,handleInput}) {
+function Search({search,handleInput}) {
     return (
         <section className="searchbox-wrap">
         <input 
