@@ -7,31 +7,39 @@ import Popup from './component/Popup'
 
 function App() {
   const [state, setState] = useState({
-    s: "",
+    s: "Pokemon",
+    d: '',
+    t: '',
     results: [],
     selected: {}
   });
   const apiurl = "http://www.omdbapi.com/?apikey=dfe6d885";
 
-  const search = (e) => {
+ const search = (e) => {
     if (e.key === "Enter") {
-      axios(apiurl + "&s=" + state.s).then(({ data }) => {
+      if(!state.s){
+        alert('Hata')
+      } else {
+        console.log(apiurl + "&s=" + state.s + "&y=" + state.d + "&type=" + state.t)
+       axios(apiurl + "&s=" + state.s + "&y=" + state.d + "&type=" + state.t ).then(({ data }) => {
+        console.log(data.Search)
         let results = data.Search;
 
         setState(prevState => {
           return { ...prevState, results: results }
         })
       });
+      }
     }
   }
   
-  const handleInput = (e) => {
-    let s = e.target.value;
+  // const handleInput = (e) => {
+  //  let s = e.target.value;
 
-    setState(prevState => {
-      return { ...prevState, s: s }
-    });
-  }
+  //  setState(prevState => {
+  //    return { ...prevState, s: s }
+  //  });
+ // }
 
   const openPopup = id => {
     axios(apiurl + "&i=" + id).then(({ data }) => {
@@ -57,7 +65,7 @@ function App() {
         <h1>Movie Database</h1>
       </header>
       <main>
-        <Search handleInput={handleInput} search={search} />
+        <Search setState={setState} search={search} />
 
         <Results results={state.results} openPopup={openPopup} />
 

@@ -5,8 +5,8 @@ import Result from './Result'
 function Results ({ results, openPopup }) {
 	return (
 		<section className="results">
-			{results.map(result => (
-				<Result key={result.imdbID} result={result} openPopup={openPopup} />
+			{results.map((result,index) => (
+				<Result key={index} result={result} openPopup={openPopup} />
 			))}
 		</section>
 	)
