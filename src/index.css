@@ -5,8 +5,8 @@
 }
 
 body {
-    font-family: 'montserrat', sans-serif;
-    background-color: #223343;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #10477a;
 }
 
 header {
@@ -33,20 +33,21 @@ section {
 .searchbox {
     display: block;
     width: 100%;
-    padding: 15px;
+    padding: 10px;
+    margin-bottom: 2px;
     border: none;
     outline: none;
     background: none;
-    background-color: #EEE;
+    background-color: #eee;
     border-radius: 8px;
-    color: #53565A;
-    font-size: 20px;
+    color: #53565a;
+    font-size: 15px;
     font-weight: 300;
     transition: 0.4s ease-out;
 }
 
 .searchbox:focus {
-    box-shadow: 0px 0px 8px 3px #4484C4;
+    box-shadow: 0px 0px 8px 3px #4484c4;
 }
 
 .results {
@@ -71,17 +72,22 @@ section {
 
 .results .result h3 {
     color: #fff;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 600;
     padding: 10px;
-    background: #445565;
+    background: #1b62a5;
     flex: 1 1 100%;
-    transition: 0.4s ease-out;
+    transition: 0.3s ease-out;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .results .result:hover h3 {
     background: #fff;
     color: #223343;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .popup {
@@ -90,13 +96,14 @@ section {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: #445565;
+    background-color: #10477a;
     overflow-y: scroll;
+    overflow-x: scroll;
 }
 
 .popup .content {
     display: block;
-    width: 100%;
+    width: 150%;
     max-width: 960px;
     margin: 0 auto;
     padding: 25px;
@@ -108,7 +115,7 @@ section {
     font-weight: 600;
 }
 
-popup .content h2 span {
+.popup .content h2 span {
     font-size: 20px;
     font-weight: 300;
 }
@@ -120,7 +127,20 @@ popup .content h2 span {
 .popup .content .plot {
     display: flex;
     flex-wrap: wrap;
-    margin: 0px -15px 30px;
+    margin: 20px -15px 30px;
+}
+
+.popup .content .plot2 {
+    max-width: 600px;
+}
+
+.popup .content .plot2 .items {
+    padding: 20px;
+    display: inline-block;
+}
+
+.popup .content .plot2 .items .item {
+    padding-bottom: 25px;
 }
 
 .popup .content .plot img {
@@ -136,10 +156,10 @@ popup .content h2 span {
 
 .popup .content .close {
     display: inline-block;
-    padding: 15px 30px;
+    padding: 10px 20px;
     font-size: 18px;
     font-weight: 700;
-    background: #4484C4;
+    background: #5c98d4;
     color: #fff;
     border-radius: 8px;
     border: none;
@@ -147,8 +167,13 @@ popup .content h2 span {
     appearance: none;
     cursor: pointer;
     transition: 0.4s ease-out;
+    margin-left: 700px;
 }
 
 .popup .content .close:hover {
-    background: #223343;
+    background: #456ca7;
+}
+
+input {
+    padding: 15px;
 }
