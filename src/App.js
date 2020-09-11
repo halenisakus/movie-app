@@ -68,7 +68,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>Movie Database</h1>
+        <h1>Movie App</h1>
       </header>
       <main>
         <Search setState={setState} search={search} />
