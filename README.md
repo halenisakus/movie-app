@@ -29,7 +29,6 @@ oyuncular, IMDb puanı vb.) görüntülenmekte.<br/>
 
 • Framework olarak React kullanıldı.<br/>
 • Film bilgilerini çekmek için OMDb API (http://www.omdbapi.com/) kullanıldı.<br/>
-• TypeScript ya da ES5+ kullanılabilir.<br/>
 • Custom styling için SASS kullanıldı.<br/>
 • React Hooks kullanıldı.<br/>
 
