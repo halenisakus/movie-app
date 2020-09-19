@@ -1,68 +1,56 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# MOVIE DATABASE APP
 
-## Available Scripts
+## Kurulum
 
-In the project directory, you can run:
+```bash
+git clone https://github.com/halenisakus/movie-app.git
+cd movie-app
+npm install
+npm start
+```
 
-### `npm start`
+## Uygulama İçeriği
 
-Runs the app in the development mode.<br/>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+•Filmler bir tablo/grid içerisinde listelendi.Filmin adı, yayınlandığı tarih ve IMDb
+ID’si kolonları bulunuyor.<br/>
+•Her sayfada 10 film olacak şekilde sayfalama yapıldı.<br/>
+•Grid/tablo üzerinde bir text ile film adına göre arama yapılabiliyor. Uygulama ilk açıldığında
+default Pokemon aratılmış gibi davranıyor.<br/>
+•Kullanıcı sadece istediği yılda vizyona girmiş filmleri listeleyebilmekte.<br/>
+•Kullanıcı isterse sadece filmleri, sadece dizileri ya da sadece dizi bölümlerini aratabilmekte.<br/>
+•Film adına tıklandığında, kullanıcı filmin afişini ve diğer detaylarını (başlık, süre, tür, yönetmen,
+oyuncular, IMDb puanı vb.) görüntülenmekte.<br/>
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Kullanılan Teknolojiler
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+• Framework olarak React kullanıldı.<br/>
+• Film bilgilerini çekmek için OMDb API (http://www.omdbapi.com/) kullanıldı.<br/>
+• TypeScript ya da ES5+ kullanılabilir.<br/>
+• Custom styling için SASS kullanıldı.<br/>
+• React Hooks kullanıldı.<br/>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Uygulama Görünümü
 
-### `npm run eject`
+![1](https://user-images.githubusercontent.com/47247825/93691231-25ffc880-faeb-11ea-8846-d876aa8717e9.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![2](https://user-images.githubusercontent.com/47247825/93691232-26985f00-faeb-11ea-99c3-8644277547e4.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+![3](https://user-images.githubusercontent.com/47247825/93691233-2730f580-faeb-11ea-979d-981b40a4b6a2.png)
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![4](https://user-images.githubusercontent.com/47247825/93691234-28fab900-faeb-11ea-9f16-7183b2260469.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+![5](https://user-images.githubusercontent.com/47247825/93691236-2a2be600-faeb-11ea-936f-29114c62ace6.png)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-### Analyzing the Bundle Size
+![6](https://user-images.githubusercontent.com/47247825/93691237-2ac47c80-faeb-11ea-8713-88400e16ad75.png)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-### Making a Progressive Web App
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
